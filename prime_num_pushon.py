@@ -39,7 +39,7 @@ def print_prime_numbers(lower_num, upper_num):
 			prime_list_within_range.append(n)	#store all the prime numbers (from lower_num to upper_num) in the list
 
 	number_prime_num = len(prime_list_within_range)		#variable for number of prime numbers within the range
-	if number_prime_num == 0 and isinstance(lower_num, int):
+	if number_prime_num == 0:
 		print "Sorry, no Prime Number between %d and %d inclusive. Try with a different range." \
 		%(lower_num, upper_num)
 
@@ -53,13 +53,13 @@ def print_prime_numbers(lower_num, upper_num):
 
 
 if __name__ == '__main__':
-	print_prime_numbers(69900, 70000)
-	# try:
-	# 	#converts upper and lower values (including floats) of the range into integers and stores them
-	# 	lower_num, upper_num = int(float(sys.argv[1])), int(float(sys.argv[2]))
-	# 	if lower_num > upper_num:		#in case the range is not valid
-	# 		lower_num, upper_num = upper_num, lower_num
+	#print_prime_numbers(69900, 70000)	#to run this code directly in sublime text,IPython Notebook, etc.
+	try:
+		#converts upper and lower values (including floats) of the range into integers and stores them
+		lower_num, upper_num = int(float(sys.argv[1])), int(float(sys.argv[2]))
+		if lower_num > upper_num:		#in case the range is not valid
+			lower_num, upper_num = upper_num, lower_num
 		
-	# 	print_prime_numbers(lower_num, upper_num)
+		print_prime_numbers(lower_num, upper_num)
 
-	# except ValueError: print "Please try with a valid range of two integers."
+	except ValueError: print "Please try with a valid range of two integers."
