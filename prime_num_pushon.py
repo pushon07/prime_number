@@ -5,10 +5,10 @@ Use:  In the pyhton shell or command line, write the command given below:
 		python prime_num_pushon.py min_val max_val
 Example: python prime_num_pushon.py 1900 2000
 
-This is a small code in Python for finding the Prime numbers within any given range of integers.
+This is a small code in Python 2.7 for finding the Prime numbers within any given range of integers.
 Here I saved all the prime numbers (from 2 to maximum-value-of-the-range ) in a list first.
 Later, all the prime numbers within the given range is saved in a separate list (prime_list_within_range).
-Because to make this code work faster I used a trick to find the prime numbers. That is, instead of 
+To make this code work faster I used a nice trick to find the prime numbers. That is, instead of 
 dividing each number by all the integers between 1 and that number-itself inclusive, I divided each number
 by only the prime numbers smaller than it. If the number is divided by any smaller prime numbers,
 then its not a prime number. Interestingly, when the first number 2 was divided by the elements
@@ -53,8 +53,9 @@ def print_prime_numbers(lower_num, upper_num):
 
 
 if __name__ == '__main__':
-	#print_prime_numbers(69900, 70000)	#to run this code directly in sublime text,IPython Notebook, etc.
-	try:
+	#print_prime_numbers(69900, 70000)	#To run this code directly in sublime text,IPython Notebook, etc.
+										#Call the function and comment-out the remaining code below
+	try:	#To deal with all kinds of input values for the range
 		#converts upper and lower values (including floats) of the range into integers and stores them
 		lower_num, upper_num = int(float(sys.argv[1])), int(float(sys.argv[2]))
 		if lower_num > upper_num:		#in case the range is not valid
